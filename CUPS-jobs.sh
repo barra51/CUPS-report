@@ -1,3 +1,8 @@
+#!/bin/bash
+
+# Created by Miguel Angel H. <miguel51atlas@gmail.com>
+# Support any version of CUPS. Optimized to work with Redhat based distros.
+
 PRINTER_APP_NAME=`lpq -a | grep -v "(s)" | awk '{ print $4" "}'`
 OS_USER=`lpq -a | grep -v "(s)" | awk '{ print $2 }'`
 DISK_USAGE=`lpq -a | grep -v "(s)" | awk '{ print $5 / 1000"Kb"}'`
